@@ -7,22 +7,21 @@ class Command(BaseCommand):
 
     @staticmethod
     def json_read_categories():
-        with open('catalog/fixture/catalog_data.json', 'r', encoding='utf-8') as file:
+        with open("catalog/fixture/catalog_data.json", "r", encoding="utf-8") as file:
             data = json.load(file)
             categories = []
             for item in data:
-                if item['model'] == 'catalog.category':
+                if item["model"] == "catalog.category":
                     categories.append(item)
             return categories
 
-
     @staticmethod
     def json_read_products():
-        with open('catalog/fixture/catalog_data.json', 'r', encoding='utf-8') as file:
+        with open("catalog/fixture/catalog_data.json", "r", encoding="utf-8") as file:
             data = json.load(file)
             products = []
             for item in data:
-                if item['model'] == 'catalog.product':
+                if item["model"] == "catalog.product":
                     products.append(item)
             return products
 
