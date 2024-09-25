@@ -7,3 +7,6 @@ def home(request):
 
 def contact(request):
     return render(request, "contact.html")
+
+def base(request):
+    return render(request, "base.html")
